@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/home_page.dart';
 
 class LoginPage extends StatefulWidget {
 
@@ -48,8 +49,11 @@ class _LoginPageState extends State<LoginPage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
+        onPressed: () {
+          Navigator.of(context).pushNamed(HomePage.tag);
+        },
         padding: EdgeInsets.all(12),
-        color: Colors.green,
+        color: Colors.lightBlueAccent,
         child: Text('Log In', style: TextStyle(color: Colors.white)),
       ),
     );
